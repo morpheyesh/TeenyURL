@@ -1,30 +1,21 @@
 package main
 
 import (
-	"fmt"
 	"gopkg.in/check.v1"
-	//   "encoding/json"
-	//"io"
-//	"net/http"
-//	"net/http/httptest"
-//	"strings"
 
-	"testing"
+	//	"testing"
 )
 
-func Test(t *testing.T) {
-	check.TestingT(t)
+func (s *S) TestGetKey(c *check.C) {
+
+	_, error := GetKey("google.com")
+	c.Assert(error, check.IsNil)
+
 }
 
-type S struct{}
+func (s *S) TestGetlongUrl(c *check.C) {
 
-var _ = check.Suite(&S{})
+	_, error := GetlongUrl("asdsd.com/asdasd")
+	c.Assert(error, check.IsNil)
 
-
-func (s *S) TestGetKey(t *check.C) {
-
-x,_ := GetKey("gogole.com")
- fmt.Println(x.Id)
- fmt.Println(x.LongUrl)
- fmt.Println(x.CreatedAt)
 }

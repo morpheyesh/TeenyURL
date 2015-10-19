@@ -17,6 +17,7 @@ const ( //TODO: Move this out, get it from config
 
 type UrlData struct {
 	LongUrl string `json:"longUrl"`
+  ShortUrl string `json:"shortUrl"`
 }
 
 func ShortenHandler(w http.ResponseWriter, r *http.Request) {
@@ -32,13 +33,26 @@ func ShortenHandler(w http.ResponseWriter, r *http.Request) {
 	 log.Error("error in url")
 	}
 
-//TODO: Get it from conf
+  //TODO: Get it from conf
 	shortUrl := "localhost:8000/"+shortKey.Id
 
 	json.NewEncoder(w).Encode(shortUrl)
 
 }
 
-func LengthenHandler(w http.ResponseWriter, r *http.Request) {}
+func LengthenHandler(w http.ResponseWriter, r *http.Request) {
+
+  body, _ := ioutil.ReadAll(r.Body)
+
+  url := UrlData{}
+  json.Unmarshal(body, &url)
+
+  longUrl, err := GetlongUrl(url.ShortUrl)
+  if err != nil {
+    log.Error("Error in url")
+  }
+  fmt.Println(longUrl)
+
+}
 
 func RedirectHandler(w http.ResponseWriter, r *http.Request) {}

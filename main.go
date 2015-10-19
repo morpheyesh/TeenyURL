@@ -2,14 +2,8 @@ package main
 
 import (
 	"fmt"
-	//	"github.com/bmizerany/pat"
 	"github.com/gorilla/mux"
-
-
-	//  "encoding/json"
-	//  "github.com/morpheyesh/bitty/api"
 	"net/http"
-	//  "net/url"
 )
 
 func main() {
@@ -22,6 +16,8 @@ func main() {
 func handlers() *mux.Router {
 	router := mux.NewRouter()
 
-	router.HandleFunc("/shorten", ShortenHandler).Methods("POST")
+	router.HandleFunc("/shorten", ShortenHandler).Methods("GET")
+  router.HandleFunc("/lengthen", LengthenHandler).Methods("GET")
+
 	return router
 }

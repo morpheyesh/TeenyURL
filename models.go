@@ -3,7 +3,6 @@ package main
 import (
 	"crypto/rand"
 	"encoding/json"
-//	"fmt"
 	log "github.com/Sirupsen/logrus"
 	"github.com/garyburd/redigo/redis"
 	"regexp"
@@ -17,8 +16,8 @@ const (
 var pool *redis.Pool
 
 type Url struct {
-	Id       string
-	LongUrl  string
+	Id        string
+	LongUrl   string
 	CreatedAt time.Time
 }
 
@@ -40,12 +39,11 @@ func redisConnection() {
 	}
 }
 
-
 func GetKey(url string) (*Url, error) {
 	redisConnection()
 
-  conn := pool.Get()
-  defer conn.Close()
+	conn := pool.Get()
+	defer conn.Close()
 
 	session := &Url{LongUrl: url, CreatedAt: time.Now()}
 	//check whether url isnt empty
@@ -100,5 +98,25 @@ func (s *Url) save() error {
 	}
 
 	return nil
+
+}
+
+func GetlongUrl(url string) (*Url, error) {
+	conn := pool.Get()
+	defer conn.Close()
+
+	id := string(url[len(url)-6:])
+	//TODO: Check the url properly - make it more tighter!
+	//talk to redis and GET with a key
+	r, err := conn.Do("GET", id)
+	if err != nil {
+		log.Error("Redis connection error")
+	}
+	d, _ := redis.Bytes(r, err)
+
+	urlz := Url{}
+	err = json.Unmarshal(d, &urlz)
+
+	return &urlz, nil
 
 }

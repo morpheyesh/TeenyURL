@@ -1,5 +1,5 @@
 package main
-/*
+
 import (
 	"fmt"
 	"gopkg.in/check.v1"
@@ -30,9 +30,7 @@ var _ = check.Suite(&S{})
 
 func (s *S) TestShortenHandler(t *check.C) {
 	jsonData := `{"longUrl": "bleeh.com"}`
-	//  urlmock := UrlData{}
-	//  _ = json.Unmarshal([]byte(jsonData), &urlmock)
-	//  fmt.Println(urlmock.LongUrl)
+
 	server = httptest.NewServer(handlers())
 
 	shortenUrl := fmt.Sprintf("%s/shorten", server.URL)
@@ -41,11 +39,9 @@ func (s *S) TestShortenHandler(t *check.C) {
 
 	request, err := http.NewRequest("POST", shortenUrl, reader)
 	res, err := http.DefaultClient.Do(request)
-   fmt.Println(res.StatusCode)
 	if err != nil {
 		t.Error(err)
 	}
 
 
 }
-*/
