@@ -2,25 +2,26 @@ package main
 
 import (
 	"fmt"
-	"github.com/bmizerany/pat"
-  "github.com/morpheyesh/bitty/api"
-	"net/http"
-//  "net/url"
+	//	"github.com/bmizerany/pat"
+	"github.com/gorilla/mux"
 
+
+	//  "encoding/json"
+	//  "github.com/morpheyesh/bitty/api"
+	"net/http"
+	//  "net/url"
 )
 
 func main() {
-fmt.Println("asd")
-fs := http.FileServer(http.Dir("views"))
 
-mux := pat.New()
+	http.Handle("/", handlers())
+	fmt.Println("[x] - Starting the server")
+	http.ListenAndServe(":8000", nil)
+}
 
-mux.Get("/shorten", http.HandlerFunc(ShortenHandler))
-mux.Post("/lengthen", http.HandlerFunc(LengthenHandler))
-mux.Post("/redirect", http.HandlerFunc(RedirectHandler))
-//mux.Get("/", fs)
+func handlers() *mux.Router {
+	router := mux.NewRouter()
 
-http.Handle("/", mux)
-fmt.Println("[x] - Starting the server")
-http.ListenAndServe(":8000", nil)
+	router.HandleFunc("/shorten", ShortenHandler).Methods("POST")
+	return router
 }
