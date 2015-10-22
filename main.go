@@ -18,6 +18,6 @@ func handlers() *mux.Router {
 
 	router.HandleFunc("/shorten", ShortenHandler).Methods("GET")
   router.HandleFunc("/lengthen", LengthenHandler).Methods("GET")
-
+  router.HandleFunc("/{short:([a-zA-Z0-9]+$)}", RedirectHandler).Methods("GET")
 	return router
 }

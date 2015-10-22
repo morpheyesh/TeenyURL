@@ -1,21 +1,24 @@
 package main
 
 import (
-	"gopkg.in/check.v1"
-
+	//"gopkg.in/check.v1"
+  //"fmt"
 	//	"testing"
 )
-
+/*
 func (s *S) TestGetKey(c *check.C) {
 
-	_, error := GetKey("google.com")
+	res, error := GetKey("google.com")
+fmt.Println(res)
 	c.Assert(error, check.IsNil)
 
 }
 
 func (s *S) TestGetlongUrl(c *check.C) {
 
-	_, error := GetlongUrl("asdsd.com/asdasd")
+	r, error := GetlongUrl("tuW34o")
+fmt.Println(r)
 	c.Assert(error, check.IsNil)
 
 }
+*/

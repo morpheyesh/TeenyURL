@@ -3,6 +3,7 @@ package main
 import (
 	"crypto/rand"
 	"encoding/json"
+	"fmt"
 	log "github.com/Sirupsen/logrus"
 	"github.com/garyburd/redigo/redis"
 	"regexp"
@@ -79,6 +80,7 @@ func GetKey(url string) (*Url, error) {
 }
 
 func (s *Url) save() error {
+	redisConnection()
 
 	conn := pool.Get()
 	defer conn.Close()
@@ -101,19 +103,19 @@ func (s *Url) save() error {
 
 }
 
-func GetlongUrl(url string) (*Url, error) {
+func GetlongUrl(id string) (*Url, error) {
+	//TODO: Move this sonofgun out to init
+	redisConnection()
+
 	conn := pool.Get()
 	defer conn.Close()
 
-	id := string(url[len(url)-6:])
-	//TODO: Check the url properly - make it more tighter!
-	//talk to redis and GET with a key
 	r, err := conn.Do("GET", id)
 	if err != nil {
-		log.Error("Redis connection error")
+		log.Error("redis connection error")
 	}
-	d, _ := redis.Bytes(r, err)
 
+	d, _ := redis.Bytes(r, err)
 	urlz := Url{}
 	err = json.Unmarshal(d, &urlz)
 

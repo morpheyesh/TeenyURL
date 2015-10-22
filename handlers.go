@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
-	//	"github.com/gorilla/mux"
 	"encoding/json"
-  log "github.com/Sirupsen/logrus"
+	"fmt"
+	log "github.com/Sirupsen/logrus"
+	"github.com/gorilla/mux"
 
 	//"io"
 	"io/ioutil"
@@ -16,8 +16,8 @@ const ( //TODO: Move this out, get it from config
 )
 
 type UrlData struct {
-	LongUrl string `json:"longUrl"`
-  ShortUrl string `json:"shortUrl"`
+	LongUrl  string `json:"longUrl"`
+	ShortUrl string `json:"shortUrl"`
 }
 
 func ShortenHandler(w http.ResponseWriter, r *http.Request) {
@@ -25,16 +25,16 @@ func ShortenHandler(w http.ResponseWriter, r *http.Request) {
 	body, _ := ioutil.ReadAll(r.Body)
 
 	url := UrlData{}
-	 json.Unmarshal(body, &url)
+	json.Unmarshal(body, &url)
 
 	//check url , create key, throw err if url is bad
 	shortKey, err := GetKey(url.LongUrl)
 	if err != nil {
-	 log.Error("error in url")
+		log.Error("error in url")
 	}
 
-  //TODO: Get it from conf
-	shortUrl := "localhost:8000/"+shortKey.Id
+	//TODO: Get it from conf
+	shortUrl := "localhost:8000/" + shortKey.Id
 
 	json.NewEncoder(w).Encode(shortUrl)
 
@@ -42,17 +42,31 @@ func ShortenHandler(w http.ResponseWriter, r *http.Request) {
 
 func LengthenHandler(w http.ResponseWriter, r *http.Request) {
 
-  body, _ := ioutil.ReadAll(r.Body)
+	body, _ := ioutil.ReadAll(r.Body)
 
-  url := UrlData{}
-  json.Unmarshal(body, &url)
+	//TODO: Check the url properly - make it more tighter!
 
-  longUrl, err := GetlongUrl(url.ShortUrl)
-  if err != nil {
-    log.Error("Error in url")
-  }
-  fmt.Println(longUrl)
+	url := UrlData{}
+	json.Unmarshal(body, &url)
+	id := string(url.ShortUrl[len(url.ShortUrl)-6:])
+	Url, err := GetlongUrl(id)
+	if err != nil {
+		log.Error("Error in url")
+	}
+	shortUrl := "http://" + Url.LongUrl
+	json.NewEncoder(w).Encode(shortUrl)
 
 }
 
-func RedirectHandler(w http.ResponseWriter, r *http.Request) {}
+func RedirectHandler(w http.ResponseWriter, r *http.Request) {
+
+	short := mux.Vars(r)["short"]
+	fmt.Println(short)
+	longUrl, err := GetlongUrl(short)
+	if err != nil {
+		//TODO: http.Redirect(w, r, notfound, http.StatusMovedPermanently)
+		log.Error("Cannot redirect")
+	}
+	http.Redirect(w, r, "http://"+longUrl.LongUrl, http.StatusMovedPermanently)
+
+}
