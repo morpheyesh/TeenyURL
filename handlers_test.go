@@ -25,13 +25,12 @@ func Test(t *testing.T) {
 type S struct{}
 
 var _ = check.Suite(&S{})
-/*
+
 func (s *S) TestShortenHandler(c *check.C) {
-	jsonData := `{"LongUrl": "bleeh.com"}`
+	jsonData := `{"ShortUrl": "localhost:8000/tuW34o"}`
 
 	server = httptest.NewServer(handlers())
-  fmt.Println(server.URL)
-	shortenUrl := fmt.Sprintf("%s/shorten", server.URL)
+	shortenUrl := fmt.Sprintf("%s/shorten?url=google.com", server.URL)
 
 	reader = strings.NewReader(jsonData)
 
@@ -43,14 +42,14 @@ func (s *S) TestShortenHandler(c *check.C) {
 	c.Assert(err, check.IsNil)
 
 }
-*/
+
 
 func (s *S) TestLengthenHandler(c *check.C) {
 	jsonData := `{"ShortUrl": "localhost:8000/tuW34o"}`
 
 	server = httptest.NewServer(handlers())
   fmt.Println(server.URL)
-	lengthenUrl := fmt.Sprintf("%s/lengthen", server.URL)
+	lengthenUrl := fmt.Sprintf("%s/lengthen?url=localhost:9000/tuW34o", server.URL)
 
 	reader = strings.NewReader(jsonData)
 

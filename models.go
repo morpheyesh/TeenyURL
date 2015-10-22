@@ -3,7 +3,7 @@ package main
 import (
 	"crypto/rand"
 	"encoding/json"
-	"fmt"
+	//"fmt"
 	log "github.com/Sirupsen/logrus"
 	"github.com/garyburd/redigo/redis"
 	"regexp"

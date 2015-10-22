@@ -10,7 +10,7 @@ func main() {
 
 	http.Handle("/", handlers())
 	fmt.Println("[x] - Starting the server")
-	http.ListenAndServe(":8000", nil)
+	http.ListenAndServe(":9000", nil)
 }
 
 func handlers() *mux.Router {
