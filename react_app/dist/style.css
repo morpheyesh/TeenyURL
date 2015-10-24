@@ -1,0 +1,651 @@
+.MasterBar__bar___15D77 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 47px;
+  background-color: #0087be;
+}
+.backgrounds__lightGray___CwK22 {
+  background-color: #F3F6F8;
+}
+
+.backgrounds__blue___14lxs {
+  background-color: #00AADC;
+}
+.borders__gray___3M-eJ {
+  border-color: #C8D7E1;
+}
+
+.borders__grayHover___j_7jm {
+  border-color: #A8BECE;
+}
+
+.borders__darkBlue___3gIOO {
+  border-color: #0087BE;
+}
+
+.borders__container___2I-Ad {
+  border: solid 1px #D8E3EA;
+}
+.textColors__standard___1lah1 {
+  color: #87A6BC;
+}
+
+.textColors__dark___3_wCw {
+  color: #2E4453;
+}
+
+.textColors__light___3URP5 {
+  color: #A8BECE;
+}
+
+.textColors__interaction___1Gb5L {
+  color: #00AADC;
+}
+.typography__caption___4RTbq {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.typography__label___By2NC {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.typography__explain___3G84N {
+  font-size: 12px;
+  line-height: 20px;
+  color: #87A6BC;
+}
+
+.typography__explainLink___2GgD9 {
+  text-decoration: underline;
+}
+
+.typography__textInput___1LIpB {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 24px;
+}
+
+.typography__edit___2MFtf {
+  font-size: 11px;
+  line-height: 18px;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+.SettingsHeader__container___2SQx6 {
+  width: 100%;
+  padding: 8px 24px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.SettingsHeader__text___ju39Y {
+}
+/* Colors / Visuals */
+.containers__standardColor___1tKXf {
+  background-color: #fff;
+}
+
+/* Spacing */
+.containers__standardSpacing___UPS6S {
+  padding: 24px;
+}
+.Settings__container___393hT {
+  position: relative;
+  width: 100%;
+  max-width: 652px;
+}
+
+.Settings__spacingWrapper___1fy4C {
+  overflow: hidden;
+}
+.SettingsAttribute__container___16o4B {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 666px) {
+  .SettingsAttribute__container___16o4B {
+    display: block;
+  }
+}
+
+.SettingsAttribute__container___16o4B:first-child {
+  margin-top: 0;
+}
+.SettingsLabel__container___3Pke9 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  position: relative;
+  max-width: 186px;
+  margin-right: 24px;
+  text-align: right;
+}
+
+@media screen and (max-width: 666px) {
+  .SettingsLabel__container___3Pke9 {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
+    max-width: 100%;
+    margin-right: 0;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 667px) {
+  .SettingsLabel__container___3Pke9 {
+    padding-top: 3px;
+  }
+}
+
+.SettingsLabel__header___2vLzP {
+  margin-bottom: 8px;
+}
+
+.SettingsLabel__headerTxt___2nCCO {
+}
+
+@media screen and (max-width: 666px) {
+  .SettingsLabel__header___2vLzP {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+}
+
+.SettingsLabel__explain___2fNx1 {
+}
+
+@media screen and (max-width: 666px) {
+  .SettingsLabel__explainHidden___1gmkk {
+    display: none;
+  }
+}
+
+.SettingsLabel__saved___RbY_q {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 28px;
+  right: 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: #4AB866;
+}
+
+@media screen and (max-width: 666px) {
+  .SettingsLabel__saved___RbY_q {
+    top: 4px;
+  }
+}
+
+.SettingsLabel__savedIcon___qGH6A {
+  width: 12px;
+  margin-right: 8px;
+  fill: #4AB866;
+}
+
+.SettingsLabel__mobileInfo___vN2GA {
+  display: none;
+}
+
+@media screen and (max-width: 666px) {
+  .SettingsLabel__mobileInfo___vN2GA {
+    display: block;
+    margin-left: 4px;
+  }
+}
+
+.SettingsLabel__mobileInfoIcon___1N7xo {
+  width: 16px;
+  height: 16px;
+  fill: #C8D7E1;
+  margin-top: 2px;
+}
+
+.SettingsLabel__mobileInfoIconOpen___uPFKp {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+/*.mobileInfoIcon {
+  composes: edit from "../../../vars/typography.css";
+  font-weight: 400;
+  text-decoration: none;
+}*/
+.SettingsContent__container___qXLlQ {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  position: relative;
+  max-width: 392px;
+}
+
+@media screen and (max-width: 666px) {
+  .SettingsContent__container___qXLlQ {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
+    max-width: 100%;
+    margin-top: 8px;
+  }
+}
+.SettingsCurrent__container___2WObH:hover {
+  cursor: pointer;
+}
+
+.SettingsCurrent__containerInvisible___unNM7 {
+  pointer-events: none;
+}
+
+.SettingsCurrent__currentText___2mIXA {
+}
+
+.SettingsCurrent__currentTextConstrain___3so1L {
+  padding-right: 34px;
+}
+
+.SettingsCurrent__editText___1r9JY {
+  padding-top: 8px;
+  margin-top: 8px;
+  border-top: solid 1px #F3F6F8;
+  -webkit-transition: border-top-color 0.2s ease-out;
+          transition: border-top-color 0.2s ease-out;
+}
+
+.SettingsCurrent__container___2WObH:hover .SettingsCurrent__editText___1r9JY {
+  border-top-color: #c8d7e1;
+}
+.buttons__button___3xwgP {
+  padding: 8px 24px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  -webkit-transition: background-color 0.2s ease-out,
+              box-shadow 0.2s ease-out,
+              border-color 0.2s ease-out;
+          transition: background-color 0.2s ease-out,
+              box-shadow 0.2s ease-out,
+              border-color 0.2s ease-out;
+}
+
+.buttons__standard___2qA1s {
+  box-shadow: 0 1px 0 #C8D7E1;
+}
+
+.buttons__standard___2qA1s:hover {
+  border-color: #A8BECE;
+  box-shadow: 0 1px 0 #A8BECE;
+}
+
+.buttons__standard___2qA1s:active {
+  border-color: #A8BECE;
+  box-shadow: 0 1px 0 #A8BECE inset;
+}
+
+.buttons__primary___1vzcC {
+  color: #fff;
+  box-shadow: 0 1px 0 #0087BE;
+}
+
+.buttons__primary___1vzcC:hover {
+  border-color: #005082;
+  box-shadow: 0 1px 0 #005082;
+}
+
+.buttons__primary___1vzcC:active {
+  border-color: #005082;
+  box-shadow: 0 1px 0 #005082 inset;
+}
+
+.buttons__primary___1vzcC:disabled {
+  background-color: #BBEDFC;
+  border-color: #8CC8E1;
+  box-shadow: 0 1px 0 #8CC8E1;
+  cursor: default;
+}
+.SettingsForm__container___3cBUp {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.SettingsForm__containerVisible___7y2Tz {
+  pointer-events: auto;
+}
+
+.SettingsForm__buttonContainer___25OfA {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 12px;
+}
+
+.SettingsForm__formButton___1-RxS {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+.SettingsForm__cancelButton___3qOP4 {
+}
+
+.SettingsForm__saveButton___34B3m {
+  margin-left: 12px;
+}
+.SettingsInput__container___2OlDE {
+  width: 100%;
+}
+
+.SettingsInput__base___1ptS5 {
+  color: #78DCFA;
+  -webkit-text-fill-color: transparent;
+  width: 100%;
+  padding: 8px 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  -webkit-transition: border-color 0.2s cubic-bezier(.22,.67,.52,.92),
+              box-shadow 0.2s cubic-bezier(.22,.67,.52,.92);
+          transition: border-color 0.2s cubic-bezier(.22,.67,.52,.92),
+              box-shadow 0.2s cubic-bezier(.22,.67,.52,.92);
+}
+
+.SettingsInput__base___1ptS5:hover {
+  border-color: #A8BECE;
+}
+
+.SettingsInput__base___1ptS5:focus {
+  border-color: #00AADC;
+  box-shadow: 0 0 0 2px #78DCFA;
+}
+.DemoArea__container___3H6zW {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-top: 94px;
+}
+
+@media screen and (max-width: 666px) {
+  .DemoArea__container___3H6zW {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
+    display: block;
+    padding: 16px 8px 32px;
+    margin-top: 0;
+  }
+}
+/*================================================================================
+
+	Name: Adam's Reset CSS
+	URI: https://github.com/adambbecker/abb-reset-css
+	Description: Personal compilation of CSS reset rules
+	Author: Adam B. Becker
+	Author URI: https://github.com/adambbecker/
+	License: MIT
+	License URI: http://opensource.org/licenses/MIT
+	Version: 1.0.0
+
+	---
+
+	Compilation of favorite rules from a variety of sources, predominantly:
+
+	Tim Murtaugh: https://github.com/murtaugh/HTML5-Reset
+
+==================================================================================
+
+	1.	Sizing & Box Model
+	2.	Base Element Clean Up
+	3.	Form Elements
+	4.	Clearfix
+	5.	Helpers / Mixins
+
+==================================================================================*/
+
+
+/*--------------------------------------------------------------------------------*/
+/*	1.	Sizing & Box Model
+/*--------------------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, input, textarea, button, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {
+	display: block;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+img,
+object,
+embed {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/*	2.	Base Element Clean Up
+/*--------------------------------------------------------------------------------*/
+ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+small {
+	font-size: 85%;
+}
+
+strong {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th {
+	font-weight: bold;
+	vertical-align: bottom;
+}
+
+td {
+	font-weight: normal;
+	vertical-align: top;
+}
+
+td img {
+	vertical-align: top;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	margin: 1em 0;
+	padding: 0;
+	border: 0;
+	border-top: 1px solid #ccc;
+}
+
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/*	3.	Form Elements
+/*--------------------------------------------------------------------------------*/
+input,
+select {
+	vertical-align: middle;
+}
+
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+	vertical-align: bottom;
+}
+
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+	cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+	background: none;
+	outline: none;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/*	4.	Clearfix
+/*--------------------------------------------------------------------------------*/
+.reset__clearfix___3icaL {
+	zoom: 1;
+}
+
+.reset__clearfix___3icaL:before,
+.reset__clearfix___3icaL:after {
+	content: " ";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+
+.reset__clearfix___3icaL:after {
+	clear: both;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/*	5.	Helpers / Mixins
+/*--------------------------------------------------------------------------------*/
+.reset__ellipsis___2A4VK {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.App__app___2zoxH {
+  width: 100%;
+  height: 100%;
+  padding-top: 75px;
+  background-color: #e9eff3;
+}
