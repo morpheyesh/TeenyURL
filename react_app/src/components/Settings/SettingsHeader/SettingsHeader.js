@@ -21,8 +21,7 @@ class SettingsHeader extends Component {
 
   render() {
     return (
-      <div className={ styles.container }>
-        <h6 className={ styles.text }>{ this.props.text }</h6>
+      <div>
       </div>
     );
   }

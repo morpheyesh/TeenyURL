@@ -4,8 +4,18 @@
   left: 0;
   right: 0;
   z-index: 10;
-  height: 47px;
-  background-color: #0087be;
+  height: 97px;
+  background-color: #ecf1f1;
+}
+
+.MasterBar__titz___3-bKe {
+
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: 45px;
+  padding-left: 20px;
+  padding-top: 15px;
+  color: #58585a;
 }
 .backgrounds__lightGray___CwK22 {
   background-color: #F3F6F8;

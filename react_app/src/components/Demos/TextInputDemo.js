@@ -111,7 +111,7 @@ class TextInputDemo extends Component {
   _handleSaveClick() {
     this.setState({
       formVisible: false,
-      saved: true,
+      //saved: true,
       inputUrl: this.refs.input.refs.textarea.value,
       contentMinHeight: this._getRefHeight('current')
     }, () => {

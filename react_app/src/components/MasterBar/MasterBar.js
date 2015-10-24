@@ -17,7 +17,9 @@ class MasterBar extends Component {
 
   render() {
     return (
-      <div className={ styles.bar } />
+      <div className={ styles.bar } >
+        <h2 className={ styles.titz }>TeenyUrl</h2>
+      </div>
     );
   }
 

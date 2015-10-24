@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>TeenyURL</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
-    <style>
-      html, body {
-        height:100%;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 400;
-        color: #2e4453;
-        background-color: #e9eff3;
-      }
-      ::-webkit-input-placeholder {
-        color: #87A6BC;
-        text-shadow: none;
-        -webkit-text-fill-color: initial;
-      }
-      ::-moz-input-placeholder {
-        color: #87A6BC;
-      }
-      :-ms-input-placeholder {
-        color: #87A6BC;
-      }
-      * {
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      }
-    </style>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <div id="outlet" style="height: 100%;">
-      <%- html %>
-    </div>
-    <% for (var chunk in assets) { -%>
+
+<head>
+  <meta charset="UTF-8">
+  <title>TeenyURL | Url Shortener</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <style>
+    html,
+    body {
+      height: 100%;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      color: #2e4453;
+      background-color: #e9eff3;
+    }
+
+    ::-webkit-input-placeholder {
+      color: #87A6BC;
+      text-shadow: none;
+      -webkit-text-fill-color: initial;
+    }
+
+    ::-moz-input-placeholder {
+      color: #87A6BC;
+    }
+
+    :-ms-input-placeholder {
+      color: #87A6BC;
+    }
+
+    * {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div id="outlet" style="height: 100%;">
+    <%- html %>
+  </div>
+  <% for (var chunk in assets) { -%>
     <script src="<%= assets[chunk] %>"></script>
     <% } -%>
-  </body>
+</body>
+
 </html>
