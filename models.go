@@ -53,7 +53,7 @@ func GetKey(url string) (*Url, error) {
 	}
 
 	if httpcheck, _ := regexp.MatchString("^https?", url); !httpcheck {
-		url = "http://" + url
+		session.LongUrl = "http://" + url
 	} else if matches, _ := regexp.MatchString("[.]+", url); !matches {
 		log.Error("Please provide a valid URL")
 		return nil, nil

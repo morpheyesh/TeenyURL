@@ -27,11 +27,11 @@ class TaglineDemo extends Component {
     return (
       <TextInputDemo
         animKey="tagline"
-        headerTxt="Tagline"
-        explainTxt="A short description or catchy phrase to describe what your blog is about."
-        editTxt="Edit Tagline"
-        saveTxt="Save Tagline"
-        initialInputVal="A test within a test. When you enter that test, the effect is compounded."
+        headerTxt="TeenyURL:"
+        explainTxt="Enter a teenyurl to lengthen it"
+        editTxt=""
+        saveTxt="Go"
+        initialInputVal="teenyurl.co/xF1trL"
         springConfig={ this.props.springConfig } />
     );
   }

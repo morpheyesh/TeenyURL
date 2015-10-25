@@ -4,11 +4,13 @@ import (
 	"fmt"
 	"github.com/gorilla/mux"
 	"net/http"
+	"github.com/rs/cors"
 )
 
 func main() {
-
-	http.Handle("/", handlers())
+  muxHandler := handlers()
+ crossOrigin := cors.Default().Handler(muxHandler)
+	http.Handle("/", crossOrigin)
 	fmt.Println("[x] - Starting the server")
 	http.ListenAndServe(":9000", nil)
 }

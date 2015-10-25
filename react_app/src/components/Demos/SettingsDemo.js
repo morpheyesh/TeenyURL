@@ -23,6 +23,7 @@ class SettingsDemo extends Component {
     return (
       <Settings>
         <TitleDemo springConfig={ springConfig } />
+        <TaglineDemo springConfig={ springConfig } />
       </Settings>
     );
   }

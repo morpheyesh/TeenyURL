@@ -59,6 +59,7 @@ func RedirectHandler(w http.ResponseWriter, r *http.Request) {
 		//TODO: http.Redirect(w, r, notfound, http.StatusMovedPermanently)
 		log.Error("Cannot redirect")
 	}
-	http.Redirect(w, r, "http://"+longUrl.LongUrl, http.StatusMovedPermanently)
+	
+	http.Redirect(w, r, longUrl.LongUrl, http.StatusMovedPermanently)
 
 }
