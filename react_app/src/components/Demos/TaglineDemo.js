@@ -26,7 +26,7 @@ class TaglineDemo extends Component {
   render() {
     return (
       <TextInputDemo
-        animKey="tagline"
+        animKey="lengthen"
         headerTxt="TeenyURL:"
         explainTxt="Enter a teenyurl to lengthen it"
         editTxt=""

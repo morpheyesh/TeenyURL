@@ -26,7 +26,7 @@ class TitleDemo extends Component {
   render() {
     return (
       <TextInputDemo
-        animKey="siteTitle"
+        animKey="shorten"
         headerTxt="URL:"
         explainTxt="Enter a URL to shorten it"
         saveTxt="Go"

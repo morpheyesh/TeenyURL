@@ -46,6 +46,7 @@ class TextInputDemo extends Component {
     formVisible: false,
     inputUrl: '',
     resUrl: '',
+    reqType: '',
     contentMinHeight: 0,
     inputValue: this.props.initialInputVal || '',
     saved: false
@@ -109,10 +110,12 @@ class TextInputDemo extends Component {
   }
 
   _handleSaveClick() {
+    console.log(this.props.animKey);
     this.setState({
       formVisible: false,
       //saved: true,
       inputUrl: this.refs.input.refs.textarea.value,
+      reqType: this.props.animKey,
       contentMinHeight: this._getRefHeight('current')
     }, () => {
       setTimeout(() => {
@@ -122,24 +125,18 @@ class TextInputDemo extends Component {
       }, 1800);
     });
     this.apiCall()
-    this.updateUI()
   }
 
   apiCall() {
-    console.log("insidesssss apicallzzz");
     var $ = require('jquery');
-    var url = this.refs.input.refs.textarea.value;
-
+    var urlz = this.refs.input.refs.textarea.value;
     $.ajax({
       type: "GET",
-      url: "http://localhost:9000/shorten",
-      data: "url=" + url,
-      //data: "url=http://google.com",
+      url: "http://localhost:9000/".concat(this.props.animKey),
+      data: "url=" + urlz,
       success: function(response) {
-        //var resp = JSON.parse(response);
-        //console.log(resp);
+        console.log(response);
         this.setState({
-          //resUrl: response,
           inputValue: response
         });
       }.bind(this),
@@ -148,13 +145,6 @@ class TextInputDemo extends Component {
     });
   }
 
-  updateUI() {
-
-    //console.log(this.state.resUrl);
-    //this.setState({
-     //inputValue: this.state.resUrl
-    //});
-  }
 
   _handleInputChange(event) {
     this.setState({

@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-//	"fmt"
+	"fmt"
 	log "github.com/Sirupsen/logrus"
 	"github.com/gorilla/mux"
 
@@ -12,7 +12,7 @@ import (
 )
 
 const ( //TODO: Move this out, get it from config
-	HOST = "localhost"
+	HOST = "teenyurl.co/"
 )
 
 type UrlData struct {
@@ -20,9 +20,12 @@ type UrlData struct {
 	ShortUrl string `json:"shortUrl"`
 }
 
+func AppRedirectHandler(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "http://localhost:9000/app" , 301)
+}
+
 //TODO: url checking needs to be tighter
 func ShortenHandler(w http.ResponseWriter, r *http.Request) {
-
 	longUrl := r.FormValue("url")
 	//check url , create key, throw err if url is bad
 	shortKey, err := GetKey(longUrl)
@@ -31,14 +34,13 @@ func ShortenHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	//TODO: Get it from conf
-	shortUrl := "localhost:9000/" + shortKey.Id
+	shortUrl := HOST + shortKey.Id
 
 	json.NewEncoder(w).Encode(shortUrl)
 
 }
 
 func LengthenHandler(w http.ResponseWriter, r *http.Request) {
-
 	ShortUrl := r.FormValue("url")
 
 	id := string(ShortUrl[len(ShortUrl)-6:])
@@ -59,7 +61,7 @@ func RedirectHandler(w http.ResponseWriter, r *http.Request) {
 		//TODO: http.Redirect(w, r, notfound, http.StatusMovedPermanently)
 		log.Error("Cannot redirect")
 	}
-	
+
 	http.Redirect(w, r, longUrl.LongUrl, http.StatusMovedPermanently)
 
 }
