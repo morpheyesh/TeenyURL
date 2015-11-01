@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
+	//"fmt"
 	log "github.com/Sirupsen/logrus"
 	"github.com/gorilla/mux"
 
@@ -21,7 +21,7 @@ type UrlData struct {
 }
 
 func AppRedirectHandler(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "http://localhost:9000/app" , 301)
+	http.Redirect(w, r, "http://teenyurl/app" , 301)
 }
 
 //TODO: url checking needs to be tighter
